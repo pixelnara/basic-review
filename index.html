@@ -4,11 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>link</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <style>
+      .content-area {
+        width: 100%;
+        margin: 0 auto;
+        background-color: #eee;
+        padding: 20px;
+      }
+      .inner {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    </style>
   </head>
   <body>
-    <div class="work"><a href="./form1-a-table.html" target="_blank">form1-a-table</a></div>
-    <div class="work"><a href="./form1-b-div.html" target="_blank">form1-b-div</a></div>
-    <div class="work"><a href="./form1-c.html" target="_blank">form1-c</a></div>
-    <div class="work"><a href="./form2-d.html" target="_blank">form2-d</a></div>
+    <div class="content-area">
+      <ul class="inner form1">
+        <span>1.form1</span>
+        <li class="work"><a href="./form1-a-table.html" target="_blank">form1-a-table</a></li>
+        <li class="work"><a href="./form1-b-div.html" target="_blank">form1-b-div</a></li>
+        <li class="work"><a href="./form1-c.html" target="_blank">form1-c</a></li>
+      </ul>
+      <ul class="inner form2">
+        <span>2.form2</span>
+        <li class="work"><a href="./form2-d.html" target="_blank">form2-d</a></li>
+      </ul>
+    </div>
   </body>
 </html>

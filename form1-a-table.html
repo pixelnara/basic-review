@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>브랜드 선택 인터페이스, table</title>
+    <style></style>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/form1-a.css" />
+  </head>
+
+  <body>
+    <form>
+      <table class="brand-search">
+        <caption>
+          브랜드 검색조건
+        </caption>
+        <colgroup>
+          <col style="width: 70%" />
+          <col style="width: 30%" />
+        </colgroup>
+        <thead>
+          <tr class="top-title">
+            <th class="first">브랜드</th>
+            <th class="second">검색조건</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="data">
+            <td class="left">
+              <ul class="brand-list" id="brandList">
+                <li>
+                  <input type="checkbox" name="brand" id="all-product1" />
+                  <label for="all-product1" class="title-all">전체상품1</label>
+                </li>
+                <li class="selected">
+                  <input type="checkbox" name="brand" id="natuur1" />
+                  <label for="natuur1">
+                    <div class="brand-content">
+                      <div class="brand-logo natuur-logo">Natuur</div>
+                      <div class="title-natuur brand-title">나투르 교환권1</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="brand" id="dunkin1" />
+                  <label for="dunkin1">
+                    <div class="brand-content">
+                      <div class="brand-logo dunkin-logo">Dunkin' Donuts</div>
+                      <div class="title-dunkin brand-title">던킨 교환권1</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="brand" id="tous1" />
+                  <label for="tous1">
+                    <div class="brand-content">
+                      <div class="brand-logo tous-logo">Tous les Jours</div>
+                      <div class="title-tous brand-title">뚜레쥬르1</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="brand" id="all-product2" />
+                  <label for="all-product2 brand-title" class="title-all">전체상품2</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="brand" id="natuur2" />
+                  <label for="natuur2">
+                    <div class="brand-content">
+                      <div class="brand-logo natuur-logo">Natuur</div>
+                      <div class="title-natuur brand-title">나투르 교환권2</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="brand" id="dunkin2" />
+                  <label for="dunkin2">
+                    <div class="brand-content">
+                      <div class="brand-logo dunkin-logo">Dunkin' Donuts</div>
+                      <div class="title-dunkin brand-title">던킨 교환권2</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="brand" id="tous2" />
+                  <label for="tous2">
+                    <div class="brand-content">
+                      <div class="brand-logo tous-logo">Tous les Jours</div>
+                      <div class="title-tous brand-title">뚜레쥬르2</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="brand" id="all-product3" />
+                  <label for="all-product3" class="title-all">전체상품3</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="brand" id="natuur3" />
+                  <label for="natuur3">
+                    <div class="brand-content">
+                      <div class="brand-logo natuur-logo">Natuur</div>
+                      <div class="title-natuur brand-title">나투르 교환권3</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="brand" id="dunkin3" />
+                  <label for="dunkin3">
+                    <div class="brand-content">
+                      <div class="brand-logo dunkin-logo">Dunkin' Donuts</div>
+                      <div class="title-dunkin brand-title">던킨 교환권3</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="brand" id="tous3" />
+                  <label for="tous3">
+                    <div class="brand-content">
+                      <div class="brand-logo tous-logo">Tous les Jours</div>
+                      <div class="title-tous brand-title">뚜레쥬르3</div>
+                    </div>
+                  </label>
+                </li>
+              </ul>
+            </td>
+
+            <td class="right">
+              <ul>
+                <li class="choice">
+                  <span class="radio-item">
+                    <input type="radio" id="price1" name="price-group" />
+                    <label for="price1">~3천원</label>
+                  </span>
+                  <span class="radio-item">
+                    <input type="radio" id="price2" name="price-group" />
+                    <label for="price2">3천~5천원</label>
+                  </span>
+                  <span class="radio-item">
+                    <input type="radio" id="price3" name="price-group" />
+                    <label for="price3">5천~1만원</label>
+                  </span>
+                  <span class="radio-item">
+                    <input type="radio" id="price4" name="price-group" checked />
+                    <label for="price4">1만~5만원</label>
+                  </span>
+                  <span class="radio-item">
+                    <input type="radio" id="price5" name="price-group" />
+                    <label for="price5">5만원~</label>
+                  </span>
+                </li>
+                <li class="prd-pricerange" id="price-range">
+                  <span class="price-range-info">가격대</span>
+                  <input type="number" id="price-start" class="price-start" placeholder="시작가" value="10,000" />
+                  <span class="range"> ~ </span>
+                  <input type="number" id="price-end" class="price-end" placeholder="종가" value="50,000" />
+                </li>
+                <li class="prd-title-group" id="prd-title">
+                  <span class="prd-title">상품명</span>
+                  <input type="text" placeholder="상품명" />
+                </li>
+                <li class="button-group">
+                  <button type="reset">초기화</button>
+                  <button type="submit">적용</button>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>

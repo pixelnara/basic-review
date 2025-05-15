@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+form {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+}
+.brand-search {
+  width: 100%;
+  height: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.top-title {
+  background-color: #222;
+  color: white;
+  font-size: 14px;
+  line-height: 1.5;
+  th {
+    align-content: center;
+  }
+}
+table tr.top-title th:first-child {
+  border-top-left-radius: 10px;
+}
+table tr.top-title th:last-child {
+  border-top-right-radius: 10px;
+  @media (width < 500px) {
+    display: none;
+  }
+}
+th {
+  height: 3rem;
+}
+caption {
+  display: none;
+}
+.data {
+  @media (width < 500px) {
+    display: grid;
+  }
+}
+
+/* 중요: colgroup 설정 */
+@media (max-width: 500px) {
+  colgroup {
+    display: none;
+  }
+  .top-title .second {
+    display: none;
+  }
+}
+
+.left {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  background-color: hsl(160, 49%, 54%);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  vertical-align: top;
+  @media (width < 500px) {
+    width: 100%;
+  }
+}
+.brand-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  list-style-type: none;
+  white-space: nowrap;
+  @media (max-width: 1140px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (width < 885px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+  @media (width < 500px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+  }
+}
+.brand-list li {
+  width: 100%;
+  min-width: 130px;
+  border: 2px solid #111;
+  padding: 5px;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  background-color: white;
+  height: 120px;
+  border-radius: 0.2rem;
+  &:hover {
+    border: 5px solid blue;
+  }
+  &:checked {
+    border: 4px solid blue;
+  }
+  @media (width < 500px) {
+    min-height: 80px;
+    border: 3px solid #111;
+  }
+}
+.brand-list input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.brand-list label {
+  width: 100%;
+  cursor: pointer;
+  z-index: 1;
+}
+.brand-list li:hover {
+  background-color: white;
+}
+
+.brand-list li {
+  transition: all 0.2 ease;
+}
+.right {
+  height: 100%;
+  width: 100%;
+  vertical-align: top;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #bce9da;
+  @media (width < 500px) {
+    width: 100%;
+  }
+}
+.right ul {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.choice {
+  display: grid;
+  gap: 0.7rem;
+  padding-bottom: 1rem;
+
+  .radio-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    @media (width < 500px) {
+      gap: 25px;
+    }
+  }
+  .radio-item label {
+    line-height: 30px;
+    cursor: pointer;
+    line-height: 24px;
+    width: 100%;
+    padding-left: 32px;
+    @media (width < 500px) {
+      padding-left: 36px;
+    }
+  }
+}
+.choice label {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 20px;
+  white-space: nowrap;
+}
+.radio-item label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  border: 3px solid #111;
+  box-sizing: border-box;
+}
+.radio-item input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: blue;
+}
+.choice input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.radio-item label {
+  font-size: 20px;
+}
+.radio-item input[type="radio"]:checked + label {
+  color: blue;
+}
+.radio-item label:hover::before {
+  border-color: blue;
+}
+.radio-item label:hover {
+  color: blue;
+}
+.button-group {
+  display: flex;
+  gap: 0.1rem;
+  padding-top: 1rem;
+  @media (width < 500px) {
+    gap: 0.4rem;
+  }
+}
+.button-group button {
+  padding: 8px 16px;
+  background-color: blue;
+  color: white;
+  border: 1px solid blue;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 360;
+
+  @media (width < 500px) {
+    width: 100%;
+    padding: 1.3rem;
+    font-size: 18px;
+  }
+}
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border: 2px solid #111;
+  box-sizing: border-box;
+  border-radius: 0.2rem;
+}
+input[type="text"]:focus,
+input[type="text"]:hover,
+input[type="number"]:focus,
+input[type="number"]:hover {
+  border-color: blue;
+  outline: 1px solid blue;
+  box-sizing: border-box;
+  color: blue;
+}
+/*1.가격대*/
+.prd-pricerange {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+
+  @media (max-width: 1140px) {
+    flex-wrap: wrap;
+  }
+
+  .price-start,
+  .price-end {
+    width: auto;
+    font-size: 17px;
+    font-weight: 600;
+    @media (max-width: 1140px) {
+      width: 100%; /* 작은 화면에서 100% 너비, 중요!! */
+    }
+  }
+}
+.range {
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+/*2.상품명*/
+.prd-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @media (max-width: 1140px) {
+    flex-wrap: wrap;
+  }
+}
+
+.price-range-info,
+.prd-title {
+  font-size: 17px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: #111;
+}
+/*2.상품명*/
+.prd-title-group input[type="text"] {
+  width: 100%;
+
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 0.2rem;
+}
+.prd-title-group {
+  @media (width < 500px) {
+    display: flex;
+    gap: 10px;
+  }
+}
+.brand-content {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 0.4rem;
+  align-items: center;
+}
+.brand-logo {
+  width: 124px;
+  height: 64px;
+  background-color: cadetblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+.brand-title {
+  display: none;
+}
+.dunkin-logo {
+  background: url(../images/ex-14-btn/img_dunkin.png) no-repeat center center / cover;
+}
+.tous-logo {
+  background: url(../images/ex-14-btn/img_tous.png) no-repeat center center / cover;
+}
+.natuur-logo {
+  background: url(../images/ex-14-btn/img_natuur.png) no-repeat center center / cover;
+}

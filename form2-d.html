@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>하얀 배경 라디오 버튼</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="./css/form2-d.css" />
+    <style></style>
+  </head>
+  <body>
+    <div class="search-conditions">
+      <!--1번-->
+      <div class="choice">
+        <label for="search-condtion" class="search-condtion">1.검색조건</label>
+        <div class="radio-item">
+          <input type="radio" id="price1" name="price-group" />
+          <label for="price1">~3천원</label>
+        </div>
+
+        <div class="radio-item">
+          <input type="radio" id="price2" name="price-group" />
+          <label for="price2">3천~5천원</label>
+        </div>
+
+        <div class="radio-item">
+          <input type="radio" id="price3" name="price-group" />
+          <label for="price3">5천~1만원</label>
+        </div>
+
+        <div class="radio-item">
+          <input type="radio" id="price4" name="price-group" checked />
+          <label for="price4">1만~5만원</label>
+        </div>
+
+        <div class="radio-item">
+          <input type="radio" id="price5" name="price-group" />
+          <label for="price5">5만원~</label>
+        </div>
+      </div>
+      <!--choice-->
+      <!--2번-->
+      <div class="price-range-group">
+        <span class="price-label">2.가격대</span>
+        <input type="number" id="price-start" placeholder="시작" value="10000" />
+        <span>~</span>
+        <input type="number" id="price-end" placeholder="끝" value="50000" />
+      </div>
+      <!--3번-->
+      <div class="product-title">
+        <span class="price-label">3.상품명</span>
+        <input type="text" placeholder="상품명" />
+      </div>
+      <!--4번-->
+      <div class="button-group">
+        <button type="reset">초기화</button>
+        <button type="submit">적용</button>
+      </div>
+    </div>
+    <!--search-conditions-->
+  </body>
+</html>

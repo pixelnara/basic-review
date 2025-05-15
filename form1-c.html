@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>브랜드 선택, div, grid로 구성</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/form1-c.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <form>
+        <fieldset>
+          <legend>dashboard</legend>
+          <div class="header">
+            <h2 class="header-title title1">브랜드</h2>
+            <h2 class="header-title title2">검색조건</h2>
+          </div>
+          <div class="main-content">
+            <!-- 1.브랜드 섹션 -->
+            <section class="brand-section">
+              <ul class="brand-list" id="brandList">
+                <li class="brand-item">
+                  <input type="checkbox" name="brand" id="all-product1" class="brand-checkbox" aria-label="전체 상품1번" />
+                  <label for="all-product1" class="brand-label">전체상품1</label>
+                </li>
+
+                <li class="brand-item">
+                  <input type="checkbox" name="brand" id="natuur1" class="brand-checkbox" aria-label="나투르 1번" />
+                  <label for="natuur1" class="brand-label">
+                    <div class="brand-content">
+                      <div class="brand-logo natuur-logo"></div>
+                      <div>나투르 교환권1-a</div>
+                    </div>
+                  </label>
+                </li>
+                <li class="brand-item">
+                  <input type="checkbox" name="brand" id="dunkin1" class="brand-checkbox" aria-label="덩킨 1번" />
+                  <label for="dunkin1" class="brand-label">
+                    <div class="brand-content">
+                      <div class="brand-logo dunkin-logo"></div>
+                      <div>덩킨1-a</div>
+                    </div>
+                  </label>
+                </li>
+                <li class="brand-item">
+                  <input type="checkbox" name="brand" id="tous1" class="brand-checkbox" aria-label="뚜레쥬르 1번" />
+                  <label for="tous1" class="brand-label">
+                    <div class="brand-content">
+                      <div class="brand-logo tous-logo"></div>
+                      <div>뚜레쥬르1-a</div>
+                    </div>
+                  </label>
+                </li>
+                <li class="brand-item">
+                  <input type="checkbox" name="brand" id="all-product2" class="brand-checkbox" aria-label="전체상품 2번" />
+                  <label for="all-product2" class="brand-label">전체상품2</label>
+                </li>
+                <li class="brand-item">
+                  <input type="checkbox" name="brand" id="natuur2" class="brand-checkbox" aria-label="나투르 2번" />
+                  <label for="natuur2" class="brand-label">
+                    <div class="brand-content">
+                      <div class="brand-logo natuur-logo">logo</div>
+                      <div>나투르 교환권2-a</div>
+                    </div>
+                  </label>
+                </li>
+                <li class="brand-item">
+                  <input type="checkbox" name="brand" id="dunkin2" class="brand-checkbox" aria-label="덩킨 2번" />
+                  <label for="dunkin2" class="brand-label">
+                    <div class="brand-content">
+                      <div class="brand-logo dunkin-logo">logo</div>
+                      <div>덩킨2-a</div>
+                    </div>
+                  </label>
+                </li>
+                <li class="brand-item">
+                  <input type="checkbox" name="brand" id="tous2" class="brand-checkbox" aria-label="뚜레쥬르 2번" />
+                  <label for="tous2" class="brand-label">
+                    <div class="brand-content">
+                      <div class="brand-logo tous-logo">logo</div>
+                      <div>뚜레쥬르2-a</div>
+                    </div>
+                  </label>
+                </li>
+                <li class="brand-item">
+                  <input type="checkbox" name="brand" id="all-product3" class="brand-checkbox" aria-label="전체상품 3번" />
+                  <label for="all-product3" class="brand-label">전체상품3</label>
+                </li>
+                <li class="brand-item">
+                  <input type="checkbox" name="brand" id="natuur3" class="brand-checkbox" aria-label="나투르 3번" />
+                  <label for="natuur3" class="brand-label">
+                    <div class="brand-content">
+                      <div class="brand-logo natuur-logo">logo</div>
+                      <div>나투르 교환권3-a</div>
+                    </div>
+                  </label>
+                </li>
+                <li class="brand-item">
+                  <input type="checkbox" name="brand" id="dunkin3" class="brand-checkbox" aria-label="덩킨 3번" />
+                  <label for="dunkin3" class="brand-label">
+                    <div class="brand-content">
+                      <div class="brand-logo dunkin-logo">logo</div>
+                      <div>덩킨3-a</div>
+                    </div>
+                  </label>
+                </li>
+                <li class="brand-item">
+                  <input type="checkbox" name="brand" id="tous3" class="brand-checkbox" aria-label="뚜레쥬르 3번" />
+                  <label for="tous3" class="brand-label">
+                    <div class="brand-content">
+                      <div class="brand-logo tous-logo">logo</div>
+                      <div>뚜레쥬르3-a</div>
+                    </div>
+                  </label>
+                </li>
+              </ul>
+            </section>
+            <!-- 2.검색 조건 섹션 -->
+            <section class="search-section">
+              <ul class="search-list">
+                <li class="search-item">
+                  <div class="choice">
+                    <div class="radio-item">
+                      <input type="radio" name="price-group" id="price-1" />
+                      <label for="price-1">~3천원</label>
+                    </div>
+                    <div class="radio-item">
+                      <input type="radio" name="price-group" id="price-2" />
+                      <label for="price-2">3천~5천원</label>
+                    </div>
+                    <div class="radio-item">
+                      <input type="radio" name="price-group" id="price-3" />
+                      <label for="price-3">5천~1만원</label>
+                    </div>
+                    <div class="radio-item">
+                      <input type="radio" name="price-group" id="price-4" />
+                      <label for="price-4">1만~5만원</label>
+                    </div>
+                    <div class="radio-item">
+                      <input type="radio" name="price-group" id="price-5" />
+                      <label for="price-5">5만원~</label>
+                    </div>
+                  </div>
+                  <!--choice-->
+                </li>
+                <li class="search-item">
+                  <div class="price-group">
+                    <span class="price-label">가격대</span>
+                    <div class="price-inputs">
+                      <input type="number" id="price-start" placeholder="시작가" value="10000" />
+                      <span>~</span>
+                      <input type="number" id="price-end" placeholder="끝" value="50000" />
+                    </div>
+                  </div>
+                </li>
+                <li class="search-item">
+                  <div class="product-name">
+                    <span class="product-label">상품명</span>
+                    <input type="text" id="product-name" placeholder="상품명" />
+                  </div>
+                </li>
+                <li class="search-item">
+                  <div class="search-btns">
+                    <button type="reset" class="srch-reset">초기화</button>
+                    <button type="submit" class="srch-apply">적용</button>
+                  </div>
+                </li>
+              </ul>
+              <!--search-list-->
+            </section>
+          </div>
+          <!--main-content-->
+        </fieldset>
+      </form>
+    </div>
+    <!--container-->
+    <div aria-live="assertive" id="screen-reader-announcement" class="sr-only"></div>
+  </body>
+</html>

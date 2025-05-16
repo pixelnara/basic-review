@@ -328,6 +328,10 @@ input[type="number"]:hover {
       width: 100%; /* 작은 화면에서 100% 너비, 중요!! */
     }
   }
+  .price-start-label,
+  .price-end-label {
+    display: none;
+  }
 }
 .range {
   height: auto;

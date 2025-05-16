@@ -268,7 +268,7 @@ form {
 }
 
 .radio-item input[type="radio"] {
-  appearance: none;
+  /* appearance: none; */
   -webkit-appearance: none;
   width: 24px;
   height: 24px;

@@ -389,6 +389,10 @@ input[type="number"]:hover {
 .brand-title {
   display: none;
 }
+.title-all {
+  font-size: 16px;
+  font-weight: 500;
+}
 .dunkin-logo {
   background: url(../images/ex-14-btn/img_dunkin.png) no-repeat center center / cover;
 }

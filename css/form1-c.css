@@ -74,17 +74,24 @@ form {
 
 /* a.브랜드선택 영역 (좌) */
 .brand-section {
-  background-color: #ddd;
-  padding: 1rem;
   height: 100%;
   width: 100%;
-  align-content: center;
+  align-content: start;
+  background-color: #ccc;
+  padding: 1rem;
 }
 
 .brand-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.6rem;
+  padding: 0.4rem;
+  background-color: #aaa;
+  height: calc(120px * 3 + 10px * 2 + 2rem);
+  overflow-y: auto;
+  @media (width < 1080px) {
+    height: calc(120px * 5 + 10px * 4);
+  }
 }
 
 @media (width < 1080px) {
@@ -217,6 +224,7 @@ form {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  background-color: #dedede;
 
   @media (width < 500px) {
     height: auto;
@@ -390,9 +398,9 @@ input[type="number"]:hover {
 }
 
 .search-btns button:nth-child(1) {
-  background-color: #aaa;
+  background-color: #222;
   &:hover {
-    background-color: #777;
+    background-color: hsl(0, 0%, 33%);
   }
   &:active {
     background-color: #222;
@@ -419,13 +427,13 @@ input[type="number"]:hover {
 }
 
 .search-btns button:hover {
-  background-color: hsl(122, 39%, 59%);
+  background-color: #6ebf70;
 }
 
 .search-btns button:active {
-  background-color: hsl(122, 39%, 29%);
+  background-color: #4caf50;
 
   @media (width < 885px) {
-    background-color: hsl(122, 39%, 19%);
+    background-color: #4caf50;
   }
 }

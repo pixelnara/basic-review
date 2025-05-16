@@ -82,10 +82,9 @@ caption {
 .left {
   border: 1px solid #ddd;
   padding: 1rem;
-  background-color: hsl(160, 49%, 54%);
+  background-color: #50c39d;
   width: 100%;
   box-sizing: border-box;
-
   @media (width < 500px) {
     width: 100%;
     height: auto;
@@ -101,18 +100,23 @@ caption {
   overflow-y: auto;
   list-style-type: none;
   white-space: nowrap;
+  background-color: #2c8165;
 
   @media (max-width: 1140px) {
     grid-template-columns: repeat(3, 1fr);
+    background-color: #2c8165;
   }
   @media (width < 885px) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr 1fr;
+    height: calc(120px * 4 + 10px * 2);
+    background-color: #2c8165;
   }
   @media (width < 500px) {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(12, 1fr);
+    background-color: #2c8165;
   }
 }
 .brand-list li {

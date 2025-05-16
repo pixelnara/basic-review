@@ -163,6 +163,12 @@ body {
   gap: 3px;
   justify-content: end;
 
+  button {
+    @media (width < 885px) {
+      width: 100%;
+    }
+  }
+  /*reset*/
   button:nth-child(1) {
     padding: 10px 20px;
     background-color: #555;
@@ -171,14 +177,17 @@ body {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-
     &:hover {
       background-color: #6e6e6e;
     }
     &:active {
       background-color: #3b3b3b;
     }
+    @media (width < 885px) {
+      padding: 1rem;
+    }
   }
+  /*submit*/
   button:nth-child(2) {
     padding: 10px 20px;
     background-color: #4caf50;
@@ -187,12 +196,14 @@ body {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-
     &:hover {
       background-color: #5eba63;
     }
     &:active {
       background-color: #367d39;
+    }
+    @media (width < 885px) {
+      padding: 1rem;
     }
   }
 }

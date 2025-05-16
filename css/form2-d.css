@@ -151,6 +151,12 @@ body {
   font-weight: 700;
 }
 
+.price-start-label,
+.price-end-label,
+.product-title-label {
+  display: none;
+}
+
 /* 3.버튼영역 */
 .button-group {
   display: flex;

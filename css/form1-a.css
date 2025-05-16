@@ -255,6 +255,7 @@ caption {
 }
 .radio-item label:hover {
   color: blue;
+  background-color: hsl(160, 49%, 74%);
 }
 .button-group {
   display: flex;

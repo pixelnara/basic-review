@@ -41,6 +41,7 @@ form {
   width: 100%;
 }
 
+/*1.헤더 영역*/
 .header {
   background-color: #222;
   overflow: hidden;
@@ -71,6 +72,7 @@ form {
   align-items: center;
 }
 
+/* a.브랜드선택 영역 (좌) */
 .brand-section {
   background-color: #ddd;
   padding: 1rem;
@@ -194,7 +196,6 @@ form {
   height: 56px;
 }
 
-/* 새 코드 추가 */
 .brand-content {
   text-indent: -9999px;
 }
@@ -204,7 +205,7 @@ form {
   text-indent: -9999px;
 }
 
-/*2.검색영역 (우) */
+/* b.검색영역 (우) */
 .search-section {
   background-color: #ccc;
   height: 100%;

@@ -99,7 +99,6 @@ caption {
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
   height: calc(120px * 3 + 10px * 2 + 2rem);
-
   padding: 0.4rem;
   overflow-y: auto;
   list-style-type: none;

@@ -322,7 +322,7 @@ form {
 
 /* 2.가격대, 상품명 그룹 조정 */
 .price-group,
-.product-name {
+.product-title {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -354,10 +354,15 @@ form {
   width: 100%;
 }
 
+.price-start,
+.price-end,
+.product-name {
+  display: none;
+}
+
 /* ~ 기호가 항상 보이도록 */
 .price-inputs span {
   margin: 0 5px;
-  background-color: #ddd;
   display: flex;
   align-items: center;
   height: 40px;
@@ -400,7 +405,7 @@ input[type="number"]:hover {
 .search-btns button:nth-child(1) {
   background-color: #222;
   &:hover {
-    background-color: hsl(0, 0%, 33%);
+    background-color: #545454;
   }
   &:active {
     background-color: #222;

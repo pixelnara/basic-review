@@ -114,8 +114,8 @@ legend {
 
 .brand-list {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); */
-  Grid-template-columns: repeat( auto-fill, minmax( min(100%,  240px), 1fr ) );
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  /* Grid-template-columns: repeat( auto-fill, minmax( min(100%,  240px), 1fr ) ); */
   gap: 0.75rem;
   height: calc(120px * 3 + 10px * 2 + 2rem);
   overflow-y: auto;

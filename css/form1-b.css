@@ -1,17 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #ccc;
+}
+
 body {
+  width: 100%;
+  height: 100%;
   font-family: "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   color: #111;
+  overflow-x: hidden;
+  background-color: #ccc;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  margin:0;
+  padding: 0;
+}
+
+form, fieldset {
+  width: 100%;
 }
 
 legend {
@@ -26,18 +55,13 @@ legend {
   border: 0;
 }
 
-.container {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  margin: 0 auto;
-}
-
 .header {
+  width: 100%;
   background-color: #222;
   overflow: hidden;
   padding: 1rem 0;
   display: flex;
+  
   @media (width < 1280px) {
     display: grid;
     grid-template-columns: 1fr;
@@ -72,14 +96,15 @@ legend {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  background-color: #4caf50;
+
   @media (width < 500px) {
-    flex-direction: column; /* 세로 배치로 변경 */
+    flex-direction: column;
   }
 }
 
 /* 1.브랜드 목록 영역 (좌)*/
 .brand-section {
-  background-color: #aaa;
   flex: 7;
   padding: 1rem;
   @media (width < 500px) {
@@ -89,7 +114,8 @@ legend {
 
 .brand-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); */
+  Grid-template-columns: repeat( auto-fill, minmax( min(100%, 180px), 1fr ) );
   gap: 0.75rem;
   height: calc(120px * 3 + 10px * 2 + 2rem);
   overflow-y: auto;
@@ -97,17 +123,6 @@ legend {
   white-space: nowrap;
   padding: 0.4rem;
   background-color: #787878;
-
-  @media (width < 1280px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media (width < 885px) {
-    grid-template-columns: repeat(2, 1fr);
-    height: calc(144px * 3 + 10px * 2);
-  }
-  @media (width < 500px) {
-    grid-template-columns: 1fr;
-  }
 }
 
 .brand-item {
@@ -121,12 +136,13 @@ legend {
   border-radius: 0.4rem;
   position: relative;
   background-color: #fff;
+  border: 0.25rem solid #fff;
   transition: outline 0.2s ease;
   white-space: nowrap;
   min-height: 144px;
 
   &:hover {
-    outline: 0.25rem solid #111111;
+    border: 0.25rem solid #111111;
   }
 
   .brand-label {
@@ -173,7 +189,7 @@ legend {
 .search-section {
   padding: 1rem;
   flex: 3;
-  background-color: #ddd;
+  /* background-color: #ddd; */
 
   @media (width < 885px) {
     padding-top: 2rem;

@@ -29,7 +29,7 @@ legend {
 }
 
 .container {
-  max-width: 100%;
+  max-width: 100%; /* 이부분이군! */
   height: 100vh;
   display: grid;
   margin: 0 auto;

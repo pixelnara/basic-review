@@ -1,6 +1,17 @@
 @scope (.card) {
   h2 {
-    color: pink;
+    color: black;
+    font-size: 30px;
+  }
+  p {
+    color: black;
+    font-size: 14px;
+  }
+}
+
+@scope (.card1) {
+  h2 {
+    color: white;
   }
   p {
     color: white;

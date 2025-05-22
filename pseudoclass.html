@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pseudo-class</title>
+    <style>
+      a {
+        color: red;
+        font-size: 24px;
+        &:focus {
+          color: blue;
+        }
+      }
+      input {
+        width: 24px;
+        height: 24px;
+        &:checked {
+          outline: 2px solid red;
+        }
+      }
+      .list {
+        font-size: 24px;
+        color: green;
+      }
+      .list li:nth-child(2) {
+        color: rgb(255, 145, 0);
+      }
+      div:empty {
+        background: aqua;
+        border: 1px solid aqua;
+        padding: 10px;
+      }
+      div:not(.box) {
+        border: 2px solid rgb(83, 53, 218);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="check" />
+    <label for="check">체크하세요</label><br /><br />
+
+    <a href="">링크1</a>
+    <a href="">링크2</a>
+    <a href="">링크3</a>
+    <br /><br />
+    <ul class="list">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>
+        <div>1</div>
+        <div class="box"></div>
+        <div>3</div>
+      </li>
+    </ul>
+  </body>
+</html>

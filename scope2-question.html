@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scope4</title>
+  </head>
+  <body>
+    <div class="box">
+      test
+      <style>
+        @scope {
+          :scope {
+            color: red;
+
+            &:hover {
+              border: 3px solid blue;
+            }
+          }
+        }
+
+        .box {
+          color: blueviolet;
+        }
+      </style>
+    </div>
+
+    <div class="box">test2</div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+@scope (.card) {
+  h2 {
+    color: pink;
+  }
+  p {
+    color: white;
+  }
+  :scope {
+    background: blue;
+    border: 2px solid orange;
+    &:hover {
+      background: red;
+    }
+  }
+  @media (width < 600px) {
+    :scope {
+      background: orange;
+    }
+  }
+}

@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: #f5f5f5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* form 태그에서 label 요소,캡션 요소 등등 히든 처리  */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.container {
+  background-color: #eee;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  background-color: white;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+}
+
+.tab {
+  padding: 15px 0;
+  font-size: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+  flex: 1;
+}
+
+#tab-id:checked ~ .tabs label[for='tab-id'],
+#tab-password:checked ~ .tabs label[for='tab-password'] {
+  color: #111;
+}
+
+.tab-indicator {
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  background-color: #111;
+  border-radius: 2px;
+  width: 50%;
+  left: 0;
+  /* transition: left 0.3s ease; */
+}
+
+#tab-password:checked ~ .tabs .tab-indicator {
+  left: 50%;
+}
+
+.form-container {
+  position: relative;
+}
+
+.form-wrapper {
+  display: flex;
+  width: 200%;
+  transition: transform 0.3s ease;
+}
+
+.form {
+  width: 50%;
+  padding: 0 10px;
+  border: 1px solid white;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.input-field {
+  width: 100%;
+  padding: 18px 50px 18px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 200;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: #fafafa;
+  color: #111;
+}
+
+.input-field:focus {
+  background-color: white;
+  border: 2px solid #111;
+}
+
+.input-field::placeholder {
+  color: #aaa;
+  font-weight: 400;
+}
+
+#tab-password:checked ~ .form-container .form-wrapper {
+  transform: translateX(-50%);
+}
+
+.input-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccc;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.icon-user::before {
+  content: '👤';
+}
+.icon-lock::before {
+  content: '🔒';
+}
+.icon-email::before {
+  content: '✉️';
+}
+.icon-download::before {
+  content: '⬇️';
+}
+
+.login-btn {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #97bde7, #357abd);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+}
+
+.copyright {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #999;
+}

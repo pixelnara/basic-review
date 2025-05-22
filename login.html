@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/login1.css" />
+    <style></style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="subtitle">채용, 시작부터 선발까지</div>
+        <h1>title</h1>
+      </div>
+
+      <input type="radio" id="tab-id" name="tabs" checked class="visually-hidden" />
+      <input type="radio" id="tab-password" name="tabs" class="visually-hidden" />
+
+      <div class="tabs">
+        <label for="tab-id" class="tab">아이디찾기</label>
+        <label for="tab-password" class="tab">비밀번호찾기</label>
+        <div class="tab-indicator"></div>
+      </div>
+
+      <div class="form-container">
+        <div class="form-wrapper">
+          <!--form1-->
+          <div class="form" id="id-form">
+            <div class="input-group">
+              <input type="text" class="input-field" placeholder="이름입력" aria-label="이름" />
+              <span class="input-icon icon-user" aria-hidden="true"></span>
+            </div>
+            <div class="input-group">
+              <input type="text" class="input-field" placeholder="이메일입력" aria-label="이메일" />
+              <span class="input-icon icon-email" aria-hidden="true"></span>
+            </div>
+            <button class="login-btn">확인</button>
+          </div>
+
+          <!--form2-->
+          <div class="form" id="pw-form">
+            <div class="input-group">
+              <input type="text" class="input-field" placeholder="아이디입력" aria-label="아이디" />
+              <span class="input-icon icon-user" aria-hidden="true"></span>
+            </div>
+            <div class="input-group">
+              <input type="text" class="input-field" placeholder="이름입력" aria-label="이름" />
+              <span class="input-icon icon-download" aria-hidden="true"></span>
+            </div>
+            <div class="input-group">
+              <input type="email" class="input-field" placeholder="이메일입력" aria-label="이메일" />
+              <span class="input-icon icon-email" aria-hidden="true"></span>
+            </div>
+            <button class="login-btn">확인</button>
+          </div>
+        </div>
+        <!--form-wrapper-->
+      </div>
+      <!--form-container-->
+
+      <div class="copyright">copyright©Incruit Corporation. All rights reserved.</div>
+    </div>
+    <!--container-->
+  </body>
+</html>

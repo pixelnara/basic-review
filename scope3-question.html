@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@scope 직접 자식 선택</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      p {
+        color: black;
+        margin-bottom: 10px;
+      }
+
+      /* 0번: @scope에서 :scope 선택자 사용 */
+      /* :scope는 현재 스코프의 루트 요소(.container)를 의미 */
+      @scope (.container1) {
+        :scope p {
+          color: green;
+          font-weight: bold;
+        }
+      }
+
+      @scope (.container2) {
+        :scope > p {
+          color: green;
+          font-weight: bold;
+        }
+      }
+
+      @scope (.container3) {
+        p {
+          color: darkgoldenrod;
+        }
+      }
+
+      @scope (.container4) {
+        > p {
+          color: darkgoldenrod;
+        }
+      }
+
+      /* 일반 선택자 방식 (비교용) */
+      .container5 p {
+        color: blue;
+        font-weight: bold;
+      }
+
+      /* 컨테이너 스타일 */
+      .container1,
+      .container2,
+      .container3,
+      .container4,
+      .container5 {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+      }
+
+      .nested-box {
+        border: 1px dashed #999;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #f8f8f8;
+      }
+
+      .section-title {
+        background-color: #eee;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="section-title">@scope 밑에 p</h2>
+    <div class="container1">
+      <p>이 텍스트는 녹색입니다. (직접 자식이므로)</p>
+      <div class="nested-box">
+        <p>이 텍스트는 녹색입니다. (중첩된 상자 안에 있으므로)</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">@scope 밑에 p</h2>
+    <div class="container2">
+      <p>이 텍스트는 초록색입니다. (직접 자식이므로)</p>
+      <div class="nested-box">
+        <p>이 텍스트는 검은색입니다. (중첩된 상자 안에 있으므로)</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">@scope와 :scope > 선택자</h2>
+    <div class="container3">
+      <p>이 텍스트는 밤색입니다. (직접 자식이므로)</p>
+      <div class="nested-box">
+        <p>이 텍스트는 밤색입니다. (중첩된 상자 안에 있으므로)</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">@scope와 :scope > 선택자</h2>
+    <div class="container4">
+      <p>이 텍스트는 밤색입니다. (직접 자식이므로)</p>
+      <div class="nested-box">
+        <p>이 텍스트는 검은색입니다. (중첩된 상자 안에 있으므로)</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">일반 선택자 (비교용)</h2>
+    <div class="container5">
+      <p>이 텍스트는 파란색입니다.</p>
+      <div class="nested-box">
+        <p>이 텍스트도 파란색입니다. (모든 하위에 적용)</p>
+      </div>
+    </div>
+  </body>
+</html>

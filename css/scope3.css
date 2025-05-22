@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+p {
+  color: black;
+  margin-bottom: 10px;
+}
+
+/* 0번: @scope에서 :scope 선택자 사용 */
+/* :scope는 현재 스코프의 루트 요소(.container)를 의미 */
+@scope (.container1) {
+  :scope p {
+    color: green;
+    font-weight: bold;
+  }
+}
+
+@scope (.container2) {
+  :scope > p {
+    color: green;
+    font-weight: bold;
+  }
+}
+
+@scope (.container3) {
+  p {
+    color: darkgoldenrod;
+  }
+}
+
+@scope (.container4) {
+  > p {
+    color: darkgoldenrod;
+  }
+}
+
+/* 일반 선택자 방식 (비교용) */
+.container5 p {
+  color: blue;
+  font-weight: bold;
+}
+
+/* 컨테이너 스타일 */
+.container1,
+.container2,
+.container3,
+.container4,
+.container5 {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.nested-box {
+  border: 1px dashed #999;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #f8f8f8;
+}
+
+.section-title {
+  background-color: #eee;
+  padding: 5px;
+  margin-bottom: 10px;
+}

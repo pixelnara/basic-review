@@ -1,0 +1,48 @@
+:root {
+  --white: #ffffff;
+  --black: #000;
+  --gray900: #141414;
+  --gray800: #212121;
+  --gray750: #303030;
+  --gray700: #4b4b4b;
+  --gray600: #565656;
+  --gray500: #999999;
+  --gray400: #c9c9c9;
+  --gray300: #d7d7d7;
+  --gray200: #eaeaea;
+  --gray100: #fafafa;
+  --colorBlue1: #0fa3ea;
+  --colorBlue2: #1a61c7;
+  --colorBlue3: #f1f6fb;
+  --colorRed: #ff0000;
+  --colorGreen: #00ff00;
+
+  --primary: var(--colorBlue2);
+  --secondary: var(--gray900);
+  --danger: var(--colorRed);
+  --success: var(--colorGreen);
+
+  --font-xs: 1.1rem;
+  --font-ssm: 1.2rem;
+  --font-sm: 1.3rem;
+  --font-base: 1.4rem;
+  --font-reg: 1.6rem;
+  --font-md: 1.8rem;
+  --font-lg: 2rem;
+  --font-xl: 2.4rem;
+  --font-xxl: 2.8rem;
+
+  --lh-sm: 1.2;
+  --lh-base: 1.5;
+  --lh-md: 1.8;
+
+  --fw-thin: 100;
+  --fw-extralight: 200;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --fw-black: 900;
+}

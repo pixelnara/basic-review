@@ -1,0 +1,19 @@
+@layer reset, print, atom, molecules, organisms, template, page, utility;
+
+/* 기초 */
+@import url(./reset-b.css) layer(reset);
+
+/* 원자 */
+@import url(./variable.css) layer(atom);
+@import url(./typography.css) layer(atom);
+
+/* 분자 */
+
+/* 유기체 */
+@import url(./bulletin.css) layer(organisms);
+
+/* 템플릿 */
+
+/*유틸리티*/
+@import url(./utility.css) layer(utility);
+@import url(./spacing.css) layer(utility);

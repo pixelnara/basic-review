@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,22 +8,22 @@
   </head>
   <body>
     <div class="box-area">
-      <nav class="nav-area">
+      <nav class="nav-area" aria-label="게시판 검색 및 정렬">
         <p class="txt-base">총<span>488</span>건</p>
-        <form action="">
+        <form>
           <fieldset class="grid1">
             <legend class="visually-hidden">게시물검색</legend>
-            <label for="search-type" class="visually-hidden">제목:</label>
+            <label for="search-type" class="visually-hidden">정렬 방식:</label>
             <div class="txt-base selectbox">
               <span>정렬1</span>
             </div>
-            <label for="search-keyword " class="visually-hidden">검색:</label>
-            <input type="search" name="search-keyword" id="search-keyword" placeholder="검색어 입력" class="input-area txt-base" aria-label="검색" />
+            <label for="search-keyword" class="visually-hidden">검색:</label>
+            <input type="search" name="search-keyword" id="search-keyword" placeholder="검색어 입력" class="input-area txt-base" aria-label="게시물 검색어 입력" />
             <button type="submit" class="button-area txt-base">검색</button>
           </fieldset>
         </form>
       </nav>
-      <ul class="bulletin-list">
+      <ul class="bulletin-list" aria-label="게시판 목록">
         <li>
           <div class="category category2 txt-base">구분</div>
           <div class="title txt-base">제목</div>
@@ -31,34 +31,34 @@
           <div class="date txt-base">등록일</div>
         </li>
         <li>
-          <a href="">
+          <a href="#" aria-label="공지사항: 채용공고 타이틀이 들어갑니다, 2024년 9월 12일 등록">
             <div class="category txt-base">공지</div>
             <div class="title txt-base">[채용공고] 타이틀이 들어갑니다</div>
-            <div class="attached2 txt-base"></div>
+            <div class="attached2 txt-base" aria-label="첨부파일 있음"></div>
             <div class="date txt-base">2024-09-11</div>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="#" aria-label="공지사항: 채용공고 타이틀이 들어갑니다, 2024년 9월 12일 등록">
             <div class="category txt-base">공지</div>
             <div class="title txt-base">[채용공고] 타이틀이 들어갑니다</div>
-            <div class="attached2 txt-base"></div>
+            <div class="attached2 txt-base" aria-label="첨부파일 있음"></div>
             <div class="date txt-base">2024-09-12</div>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="#" aria-label="공지사항: 채용공고 타이틀이 들어갑니다, 2024년 9월 12일 등록">
             <div class="category txt-base">공지</div>
             <div class="title txt-base">[채용공고] 타이틀이 들어갑니다</div>
-            <div class="attached2 txt-base"></div>
+            <div class="attached2 txt-base" aria-label="첨부파일 있음"></div>
             <div class="date txt-base">2024-09-13</div>
           </a>
         </li>
       </ul>
       <div class="readmore mt20">
         <div class="more txt-base">
-          <a href="#"
-            >더보기 <strong><span class="num">10</span></strong></a
+          <a href="#" aria-label="게시물 10개 더 보기"
+            >더보기 <strong><span class="num" aria-hidden="true">10</span></strong></a
           >
         </div>
       </div>
